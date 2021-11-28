@@ -28,7 +28,12 @@ Vue.use(VueRouter)
     path: '/success',
     name: 'success',
     component: () => import('../components/SuccessDC.vue')
-  }
+  },
+  {
+    path: '/prizes',
+    name: 'prizes',
+    component: () => import('../components/Prizes.vue')
+  },
 ]
 
 const router = new VueRouter({

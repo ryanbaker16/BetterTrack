@@ -6,95 +6,42 @@
             <div class="form-group">
                 <label>Hey, how are ya feeling?</label>
                 <div>
-                  <textarea id="feel_input" name="dc_feeling" placeholder="Write down some of your thoughts and emotions...">
+                  <textarea v-model="feels_entry" id="feel_input" placeholder="Write down some of your thoughts and emotions...">
                   </textarea>
                 </div>
             </div>
-            <div id="star-wrapper">
-              <div class="btn-group mt-3 group1">
-                  <button type="button" class="btn btn-outline-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
-    </svg>
-                    <span class="visually-hidden">Button</span>
-                  </button>
-                  <button type="button" class="btn btn-outline-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
-    </svg>
-                    <span class="visually-hidden">Button</span>
-                  </button>
-                  <button type="button" class="btn btn-outline-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
-    </svg>
-                    <span class="visually-hidden">Button</span>
-                  </button>
-                  <button type="button" class="btn btn-outline-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
-    </svg>
-                    <span class="visually-hidden">Button</span>
-                  </button>
-                  <button type="button" class="btn btn-outline-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-      <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
-    </svg>
-                    <span class="visually-hidden">Button</span>
-                  </button>
-                </div>
 
-                <div class="btn-group mb-3">
-                    <button type="button" class="btn btn-outline-secondary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
-      </svg>
-                      <span class="visually-hidden">Button</span>
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
-      </svg>
-                      <span class="visually-hidden">Button</span>
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
-      </svg>
-                      <span class="visually-hidden">Button</span>
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
-      </svg>
-                      <span class="visually-hidden">Button</span>
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
-      </svg>
-                      <span class="visually-hidden">Button</span>
-                    </button>
-                  </div>
+            <div class="form group">
+              <label>Rate your mood on a scale of 1-10</label>
+              <div class="slider-container">
+                <vue-range-slider v-model="checkin_rating" :min="min" :max="max" :formatter="formatter"></vue-range-slider>
+              </div>
             </div>
 
             <div class="form-group">
                 <label>Any goals for today?</label>
-                <textarea id="goal_input" name="dc_goals" placeholder="Write down anything you want to achieve today, big or small...">
+                <textarea  v-model="goals_entry" id="goal_input" name="dc_goals" placeholder="Write down anything you want to achieve today, big or small...">
                 </textarea>
             </div>
 
             <div class="form-group">
                 <label>Any thing else you want to mention?</label>
-                <textarea id="misc_input" name="dc_misc" placeholder="Write down whatever else you want to make not of...">
+                <textarea v-model="misc_entry" id="misc_input" name="dc_misc" placeholder="Write down whatever else you want to make not of...">
                 </textarea>
             </div>
 
             <div class="form-group">
-              <router-link :to="{name: 'success'}"><button type="submit" class="btn btn-dark btn-lg btn-block" id= "dc_submit">Submit</button></router-link>
+              <router-link :to="{name: 'success'}"><button v-on:click="submitCheckin" type="submit" class="btn btn-dark btn-lg btn-block" id= "dc_submit">Submit</button></router-link>
             </div>
 
         </form>
+        <div>
+          <p>{{ checkin_rating }}</p>
+          <p>{{ feels_entry }}</p>
+          <p>{{ goals_entry }}</p>
+          <p>{{ misc_entry }}</p>
+        </div>
+
         <footer class="text-center text-lg-start bg-light text-muted">
           <div class="btn-group" role="group" id="dc_footer">
             <button type="button" class="btn btn-secondary" disabled>
@@ -117,9 +64,30 @@
 </template>
 
 <script>
-    export default {
-        data() {
-            return {}
-        }
+import 'vue-range-component/dist/vue-range-slider.css'
+import VueRangeSlider from 'vue-range-component'
+
+export default {
+  data() {
+    return {
+      feels_entry: '',
+      goals_entry: '',
+      misc_entry:  '',
+      checkin_rating: 5,
     }
+  },
+  components: {
+    VueRangeSlider,
+  },
+  methods: {
+    submitCheckin(){
+        console.log("PENIS");
+    },
+  },
+  created() {
+    this.min = 1
+    this.max = 10
+    this.formatter = checkin_rating => `${checkin_rating}`
+  }
+}
 </script>
